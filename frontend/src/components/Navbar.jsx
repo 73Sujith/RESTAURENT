@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { data } from "../restApi.json";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  const { logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout(); // Clear token and authentication state
+    navigate("/login"); // Redirect to login page
+  };
+
   return (
     <>
       <nav>
@@ -22,7 +34,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <button className="menuBtn">OUR MENU</button>
+          <button className="menuBtn" onClick={handleLogout}>LOGOUT</button>
         </div>
         <div className="hamburger" onClick={()=> setShow(!show)}>
                 <GiHamburgerMenu/>

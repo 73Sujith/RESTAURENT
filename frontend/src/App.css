@@ -1112,3 +1112,92 @@ footer .container .banner .right {
   }
 }
 /**********************************************************************************************************************/
+
+/**********************************************************************************************************************/
+
+/******************* ABOUT US COMPONENT STYLING **************/
+/**********************************************************************************************************************/
+/* Login Page Styling */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fbf2, #f5f5f5);
+}
+
+.login-container {
+  width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.login-form .form-group {
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #222;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #222, #555);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #555, #222);
+}
+
+.register-prompt {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.register-link {
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  color: #000;
+}
