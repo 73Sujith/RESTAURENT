@@ -7,8 +7,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     https: {
-      key: fs.readFileSync('../backend/cert/key.pem'), // Path to your private key
-      cert: fs.readFileSync('../backend/cert/cert.pem'), // Path to your certificate
+      key: fs.readFileSync('../backend/cert/localhost+2-key.pem'), // Path to your private key
+      cert: fs.readFileSync('../backend/cert/localhost+2.pem'), // Path to your certificate
     },
     port: 5173,
     proxy: {
