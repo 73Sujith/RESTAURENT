@@ -1,5 +1,14 @@
+import https from "https";
+import fs from "fs";
 import app from "./app.js";
 
-app.listen(process.env.PORT, ()=>{
-    console.log(`SERVER HAS STARTED AT PORT ${process.env.PORT}`);
-})
+const PORT = process.env.PORT || 5000;
+
+const sslOptions = {
+  key: fs.readFileSync("./cert/key.pem"),
+  cert: fs.readFileSync("./cert/cert.pem"),
+};
+
+https.createServer(sslOptions, app).listen(PORT, () => {
+  console.log(`HTTPS SERVER STARTED AT https://localhost:${PORT}`);
+});
