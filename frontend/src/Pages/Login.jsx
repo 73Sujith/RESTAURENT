@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://localhost:4000/api/v1/auth/login", form, {
+      const res = await axios.post("http://localhost:4000/api/v1/auth/login", form, {
         headers: { "Content-Type": "application/json" },
       });
       login(res.data.token); // Save token to context and localStorage
